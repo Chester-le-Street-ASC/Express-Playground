@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // res.render('index', { title: 'Express', headers: JSON.stringify(req.headers) });
+  res.json(req.headers);
+});
+
+router.get('/x', function(req, res, next) {
   res.json(req.headers);
 });
 
